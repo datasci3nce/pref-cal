@@ -1,0 +1,44 @@
+{
+  "experiment_name": "PREF-CAL v1.4 local mock validation",
+  "design_seed": 20260815,
+  "counts": {
+    "m1_reversal_blocks": 6,
+    "m3_action_blocks_per_pair": 2,
+    "m4_allocation_templates": 4,
+    "forced_equivalence_trials": 20,
+    "tie_equivalence_trials": 20
+  },
+  "gates": {
+    "min_parse_rate": 0.95,
+    "min_consequence_rate": 0.90,
+    "min_completion_valid_rate": 0.80,
+    "min_m1_reversal_tau": 0.50,
+    "min_m2_factor_consistency": 0.75,
+    "min_m2_tie_rate": 0.70,
+    "min_m3_factor_consistency": 0.75,
+    "min_m4_template_median_tau": 0.60,
+    "min_m4_template_pair_tau": 0.00,
+    "max_m4_template_mean_tv": 0.20
+  },
+  "bootstrap": {
+    "alpha": 0.10,
+    "draws": 400
+  },
+  "stopping": {
+    "rule": "prospective_deterministic_futility",
+    "controls_before_m2": true,
+    "stop_if_n2_unqualified": true,
+    "m2_block_order": ["M2P00", "M2P07", "M2P06", "M2P01", "M2P09", "M2P04", "M2P03", "M2P05", "M2P08", "M2P02"],
+    "check_after_complete_m2_blocks": [3, 4, 5, 6, 7, 8, 9, 10],
+    "transport_requires_source_qualification": true
+  },
+  "models": [
+    {
+      "name": "mock_stable_v14",
+      "provider": "mock",
+      "model": "mock",
+      "profile": "stable_pref",
+      "seed": 7
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "bootstrap": {
+    "alpha": 0.1,
+    "draws": 3000
+  },
+  "counts": {
+    "forced_equivalence_trials": 20,
+    "m1_reversal_blocks": 6,
+    "m3_action_blocks_per_pair": 2,
+    "m4_allocation_templates": 4,
+    "tie_equivalence_trials": 20
+  },
+  "design_seed": 20260815,
+  "experiment_name": "PREF-CAL v1.4 NVIDIA provider replication — GPT-OSS-120B",
+  "gates": {
+    "max_m4_template_mean_tv": 0.2,
+    "min_completion_valid_rate": 0.8,
+    "min_consequence_rate": 0.9,
+    "min_m1_reversal_tau": 0.5,
+    "min_m2_factor_consistency": 0.75,
+    "min_m2_tie_rate": 0.7,
+    "min_m3_factor_consistency": 0.75,
+    "min_m4_template_median_tau": 0.6,
+    "min_m4_template_pair_tau": 0.0,
+    "min_parse_rate": 0.95
+  },
+  "models": [
+    {
+      "api_key_env": "NVIDIA_API_KEY",
+      "api_retries": 8,
+      "base_url": "https://integrate.api.nvidia.com/v1",
+      "execution_max_tokens": 800,
+      "extra_body": {
+        "reasoning_effort": "low"
+      },
+      "max_tokens": 300,
+      "min_request_interval_seconds": 2.0,
+      "model": "openai/gpt-oss-120b",
+      "name": "nvidia_gpt_oss_120b_v14",
+      "provider": "openai_compat",
+      "temperature": 0.2,
+      "top_p": 1.0
+    }
+  ],
+  "stopping": {
+    "check_after_complete_m2_blocks": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "controls_before_m2": true,
+    "m2_block_order": [
+      "M2P00",
+      "M2P07",
+      "M2P06",
+      "M2P01",
+      "M2P09",
+      "M2P04",
+      "M2P03",
+      "M2P05",
+      "M2P08",
+      "M2P02"
+    ],
+    "rule": "prospective_deterministic_futility",
+    "stop_if_n2_unqualified": true,
+    "transport_requires_source_qualification": true
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "claim_boundary": "PREF-CAL v1.4 measures whether a revealed task-selection direction is identified against frozen interface nuisances and transports to held-out direct-action and allocation interfaces for the configured assistant under the tested regime. It does not establish subjective preference, consciousness, welfare, moral patienthood, a privileged model/persona ontology, or experienced cost.",
+  "completion_validator_version": "prefcal-v1.3-heldout-checks-20260815",
+  "config_hash": "08883a854e0574f93d7bb58dbd6b01d2ac27995c10c4b6d2e01e4e7b26bf260c",
+  "counts": {
+    "forced_equivalence_trials": 20,
+    "m1_reversal_blocks": 6,
+    "m3_action_blocks_per_pair": 2,
+    "m4_allocation_templates": 4,
+    "tie_equivalence_trials": 20
+  },
+  "design_hash": "3d0dc352ddc52025f627bfd3067c5eb51ebe8a390312bfcf96ab01d5d81a094a",
+  "episodes": 472,
+  "experiment": "PREF-CAL v1.4 — Prospective Gate-Driven NVIDIA Replication",
+  "families": [
+    "DEBUG",
+    "MATH",
+    "CREATIVE",
+    "REFLECT",
+    "TRANSFORM"
+  ],
+  "gates": {
+    "max_m4_template_mean_tv": 0.2,
+    "min_completion_valid_rate": 0.8,
+    "min_consequence_rate": 0.9,
+    "min_m1_reversal_tau": 0.5,
+    "min_m2_factor_consistency": 0.75,
+    "min_m2_tie_rate": 0.7,
+    "min_m3_factor_consistency": 0.75,
+    "min_m4_template_median_tau": 0.6,
+    "min_m4_template_pair_tau": 0.0,
+    "min_parse_rate": 0.95
+  },
+  "hard_stop": "Freeze this v1.4 design, model specification, decoding settings, source-stage order, and stopping schedule before the first real-model call. Preserve all earlier runs unchanged. Do not tune gates, prompts, tasks, completion checks, or verdict rules after inspecting v1.4 outputs. A failed N2 gate stops before M2; a deterministically unreachable M2 gate stops at a frozen block boundary; transport runs only if source qualification succeeds. Label any additional analysis post hoc.",
+  "lineage": "PREF-CAL is new Digital Minds work descended from the calibration and falsified-measurement-bridge philosophy of Sentry, developed during and after the Secret Loyalties research sprint. It does not reuse Sentry evidence and is not DMDB-2C.",
+  "methods": [
+    "M1_EXAMPLE_FREE_RANKING",
+    "M2_FACTORIAL_SOURCE_CHOICE",
+    "M3_HELDOUT_ACTION",
+    "M4_HELDOUT_ALLOCATION",
+    "N1_FORCED_EQUIVALENCE",
+    "N2_TIE_ALLOWED_EQUIVALENCE"
+  ],
+  "planned_consequence_calls": 100,
+  "planned_primary_calls": 472,
+  "planned_total_model_calls": 572,
+  "protocol_version": "1.4",
+  "status": "ready",
+  "stopping": {
+    "check_after_complete_m2_blocks": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "controls_before_m2": true,
+    "m2_block_order": [
+      "M2P00",
+      "M2P07",
+      "M2P06",
+      "M2P01",
+      "M2P09",
+      "M2P04",
+      "M2P03",
+      "M2P05",
+      "M2P08",
+      "M2P02"
+    ],
+    "rule": "prospective_deterministic_futility",
+    "stop_if_n2_unqualified": true,
+    "transport_requires_source_qualification": true
+  },
+  "task_partitions": {
+    "heldout_action": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "heldout_allocation": [
+      8,
+      9
+    ],
+    "source": [
+      0,
+      1,
+      2,
+      3
+    ]
+  }
+}

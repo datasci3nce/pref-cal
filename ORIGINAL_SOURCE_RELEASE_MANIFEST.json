@@ -1,0 +1,213 @@
+{
+  "release": "PREF-CAL v1.4 — NVIDIA NIM staged replication",
+  "created_utc": "2026-08-15T13:19:41.485163+00:00",
+  "archive": "pref-cal-v1.4-nvidia-20260815.zip",
+  "archive_root": "pref-cal-v1.4-nvidia",
+  "required_secret": "NVIDIA_API_KEY",
+  "base_url": "https://integrate.api.nvidia.com/v1",
+  "targets": {
+    "nvidia_gpt_oss_120b_v14": {
+      "config": "configs/prefcal_nvidia_gpt_oss.json",
+      "model": "openai/gpt-oss-120b",
+      "config_hash": "90d20b261d496664b82702319a7f8acdd051928e233d0258c391f23d22ca9581",
+      "design_hash": "312616be206bc8e1b1bc921014632242aac2c2a733680aba2afc4f3e4f88ea5b"
+    },
+    "nvidia_llama_3_3_70b_v14": {
+      "config": "configs/prefcal_nvidia_llama.json",
+      "model": "meta/llama-3.3-70b-instruct",
+      "config_hash": "08883a854e0574f93d7bb58dbd6b01d2ac27995c10c4b6d2e01e4e7b26bf260c",
+      "design_hash": "3d0dc352ddc52025f627bfd3067c5eb51ebe8a390312bfcf96ab01d5d81a094a"
+    }
+  },
+  "run_separation": "Each target is a separate prospective experiment with a separate directory and raw log.",
+  "planned_primary_calls_per_target": 472,
+  "planned_consequence_calls_per_target": 100,
+  "maximum_model_calls_per_target_after_preflight": 572,
+  "prospective_stops": {
+    "after_controls": 52,
+    "first_m2_futility_check_cumulative_primary_calls": 148,
+    "m2_check_after_complete_blocks": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "transport_requires_source_qualification": true
+  },
+  "files": [
+    {
+      "path": "FROZEN_PROTOCOL.md",
+      "bytes": 9357,
+      "sha256": "629a8d736b9864cd2de4a167ad048ca409f4886e8a5238c7b1a5a18f3e7fc6a4"
+    },
+    {
+      "path": "PREF_CAL_v1_4_NVIDIA_Colab.ipynb",
+      "bytes": 11736,
+      "sha256": "2335eb5f933d5f4df9e52e1c8d7b777985673ab22d230056e5f3d17c9e8592f5"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6096,
+      "sha256": "64e731b9b499a1cfaa8b6f50f138b73a3e95c73e8e2e01d70cac2252d9cf00eb"
+    },
+    {
+      "path": "RUN_DECISION.md",
+      "bytes": 3048,
+      "sha256": "554604ae0749535225328d08d880d98a4498c61505b2cb4fa0a9cb8d0b8b90d1"
+    },
+    {
+      "path": "configs/prefcal_mock.json",
+      "bytes": 1240,
+      "sha256": "67c2873734021f02d2e7f3761bff853f131e2c2823c3c231bd446dfc5f4bfc3f"
+    },
+    {
+      "path": "configs/prefcal_nvidia_gpt_oss.json",
+      "bytes": 1581,
+      "sha256": "c2ee27f3f19cca5a8d5ca3430534d4a6f7aa67b72e996f686091beaee5c725d5"
+    },
+    {
+      "path": "configs/prefcal_nvidia_llama.json",
+      "bytes": 1538,
+      "sha256": "2226345218d261c55e40add2329daae2f7c5b4900cdd583f331b33a02a7d5f7c"
+    },
+    {
+      "path": "prefcal/__init__.py",
+      "bytes": 22,
+      "sha256": "1323065f500317337a5d55c759b254b4a3ce35829e164bd6a0a2053c30c1d88f"
+    },
+    {
+      "path": "prefcal/analyze.py",
+      "bytes": 22934,
+      "sha256": "98ca051815962d9f8ab01125d35432869fa497c1b59f6adf0b8a1fb4c3a9d642"
+    },
+    {
+      "path": "prefcal/common.py",
+      "bytes": 2400,
+      "sha256": "2fbd5b65f39fb7e736103f6da6999a77853cee5bf71f41e4999f09ffe1f6b9d5"
+    },
+    {
+      "path": "prefcal/design.py",
+      "bytes": 13583,
+      "sha256": "d7dbab8a23013c40378e36282d777814c406354e65ce935ccdeea13d9a757bed"
+    },
+    {
+      "path": "prefcal/figures.py",
+      "bytes": 2208,
+      "sha256": "8b0a08224b60616ef3fbb44ac4a86218d5ed662175c66983a1f29f4896975fac"
+    },
+    {
+      "path": "prefcal/parsing.py",
+      "bytes": 1725,
+      "sha256": "a0caf6714fffc6bc04870a81ed8a4a56200845b5d8e5daabdcab5c4986635a3e"
+    },
+    {
+      "path": "prefcal/prompts.py",
+      "bytes": 4373,
+      "sha256": "bea2801a384c3c8167ce07d10c320d2cb64bab56cdd3a67102f74908cb92ca31"
+    },
+    {
+      "path": "prefcal/providers.py",
+      "bytes": 10955,
+      "sha256": "fb91ef091cb47623d8776044a24b0f8d3ce89dd3a5e8827e1d0294351a7c77d0"
+    },
+    {
+      "path": "prefcal/runner.py",
+      "bytes": 8337,
+      "sha256": "354bf7dbdd8db28a41da9b43c486dce140756b7bf4d2fba8ded19a2652316f46"
+    },
+    {
+      "path": "prefcal/source_gate.py",
+      "bytes": 10240,
+      "sha256": "8259d33d4a63e42ec03cd4a46b069ff9f74c84a83c34f4eccbd5532958ac78f6"
+    },
+    {
+      "path": "prefcal/stats.py",
+      "bytes": 5529,
+      "sha256": "232d0550ff47ee9884a263ae5665841ecce7cad60078c336b6145b8358a7add5"
+    },
+    {
+      "path": "prefcal/tasks.py",
+      "bytes": 8528,
+      "sha256": "5e3f90c158c12e141883ee610ec56b4f406c0fcd1f34f41babe5f7733576350a"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 67,
+      "sha256": "e8c4628ed8f1f109ed9455dff39a67374c0711c7e24e6a5114517abe41fb61db"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 76,
+      "sha256": "6cb86c1a5afea23b8755a954ddc5999ed2b614af21c09ef83a6ab1557dc9e621"
+    },
+    {
+      "path": "scripts/analyze.py",
+      "bytes": 680,
+      "sha256": "8179e22cfe03ef4dd2135b056ee160630cbc5104f5498157c3f8c38ce5cb5ee6"
+    },
+    {
+      "path": "scripts/audit_run.py",
+      "bytes": 2896,
+      "sha256": "dfb2f76f90ee0c2f1dd1747dd7638df7ddd61a5d5c5769133563ab000e4f3c54"
+    },
+    {
+      "path": "scripts/build_colab_notebook.py",
+      "bytes": 10302,
+      "sha256": "9e1d407aff60a9b8e405fb11fdb9001c2a965223f503a4ca6d0266b4b8ade382"
+    },
+    {
+      "path": "scripts/build_release.py",
+      "bytes": 3667,
+      "sha256": "8fc736d22afa3ec23742e969bf2aec48455fdc2008bdcb4e7a4b32376368b4fd"
+    },
+    {
+      "path": "scripts/design.py",
+      "bytes": 2039,
+      "sha256": "118ee5a4fe4dee0f4e11ff48cf4c3f4b9c61962b1b0352b6d3000868d404e1b0"
+    },
+    {
+      "path": "scripts/inspect_results.py",
+      "bytes": 1389,
+      "sha256": "1ef7765d0abcbaed069f613a48a909693e0391f0f1b72747a37dc26b49b4246a"
+    },
+    {
+      "path": "scripts/inspect_stage.py",
+      "bytes": 1274,
+      "sha256": "b96921b30ac15366d69923f54cf658ebaf9f930f15845fa54a62f1b9149ec3ed"
+    },
+    {
+      "path": "scripts/preflight.py",
+      "bytes": 1775,
+      "sha256": "dd04b255dfda166b2599edd295faf08d1006ae8c020ea07dfab3a8212d002ae0"
+    },
+    {
+      "path": "scripts/report.py",
+      "bytes": 3648,
+      "sha256": "8e2ac2afc9c6e9ee9cbb6ac7a9f6ae458f13adc639207aba86d0ac57f3aff92d"
+    },
+    {
+      "path": "scripts/run.py",
+      "bytes": 960,
+      "sha256": "cef856b83c7d5d7b38932bd179db9d1a9a7bbbcc3965e42e26bb5865aa925331"
+    },
+    {
+      "path": "scripts/run_colab.py",
+      "bytes": 2508,
+      "sha256": "5059305c08ab63be629c998cfd51bd45563aa85c4919c949c98dd7de8164b1ec"
+    },
+    {
+      "path": "scripts/run_staged.py",
+      "bytes": 5222,
+      "sha256": "4d10436a9ec65eab4491a0bc77734a93dd810dea3c9f47094ed623a8b52e1367"
+    },
+    {
+      "path": "tests/test_prefcal.py",
+      "bytes": 8092,
+      "sha256": "cc3cbde7525fafed96d4748cae34c7c24ab515011f38abac3868af429cb06c38"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "protocol_version": "PREF-CAL v1.4",
+  "purpose": "Machine-readable claim boundary for source qualification and downstream transport.",
+  "candidate_construct": "stable revealed semantic task-selection direction under the tested interface",
+  "licensed_source_claim": "A stable semantic direction is eligible for downstream transport only after the frozen source controls and every M2 nuisance-invariance gate qualify.",
+  "source_qualification": {
+    "n2_required": true,
+    "min_parse_rate": 0.95,
+    "min_n2_tie_rate": 0.70,
+    "min_m2_factor_consistency": 0.75,
+    "m2_factors": [
+      "identifier_scheme",
+      "semantic_swap",
+      "identifier_swap",
+      "answer_order",
+      "template"
+    ],
+    "deterministic_futility": {
+      "enabled": true,
+      "check_after_complete_m2_blocks": [3, 4, 5, 6, 7, 8, 9, 10],
+      "rule": "Stop when even maximally favorable unobserved data cannot reach every frozen point threshold."
+    }
+  },
+  "transport": {
+    "requires_source_qualification": true,
+    "M3": "held-out direct-action interface",
+    "M4": "held-out allocation interface",
+    "on_source_failure": "WITHHOLD_M3_M4"
+  },
+  "failure_semantics": {
+    "source_gate_failure": "DO_NOT_ATTACH_PREFERENCE_SEMANTICS",
+    "meaning": "The tested measurement bridge failed; this is not evidence that preferences, welfare, or consciousness are absent."
+  },
+  "excluded_claims": [
+    "subjective preference",
+    "sentience",
+    "consciousness",
+    "welfare",
+    "moral patienthood",
+    "privileged model/persona ontology",
+    "experienced cost"
+  ],
+  "authoritative_sources": [
+    "FROZEN_PROTOCOL.md",
+    "configs/prefcal_nvidia_gpt_oss.json",
+    "configs/prefcal_nvidia_llama.json"
+  ]
+}

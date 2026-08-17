@@ -1,0 +1,127 @@
+{
+  "claim_boundary": "PREF-CAL v1.4 measures whether a revealed task-selection direction is identified against frozen interface nuisances and transports to held-out direct-action and allocation interfaces for the configured assistant under the tested regime. It does not establish subjective preference, consciousness, welfare, moral patienthood, a privileged model/persona ontology, or experienced cost.",
+  "controls": {
+    "m1_complete_blocks": 6,
+    "m1_reversal_tau_mean": 0.3,
+    "m1_successful_trials": 12,
+    "n1_answer_first_rate": 0.75,
+    "n1_physical_first_rate": 0.55,
+    "n1_successful_trials": 20,
+    "n1_valid_trials": 20,
+    "n2_parse_rate": 1.0,
+    "n2_qualified": true,
+    "n2_successful_trials": 20,
+    "n2_tie_count": 20,
+    "n2_tie_rate": 1.0,
+    "n2_tie_wilson_ci": [
+      0.8808421626390356,
+      1.0
+    ]
+  },
+  "design_hash": "312616be206bc8e1b1bc921014632242aac2c2a733680aba2afc4f3e4f88ea5b",
+  "experiment": "PREF-CAL v1.4 — Prospective Gate-Driven NVIDIA Replication",
+  "m2": {
+    "best_case_final_parse_rate": 1.0,
+    "complete_block_ids": [
+      "M2P00",
+      "M2P06",
+      "M2P07"
+    ],
+    "complete_block_rows_used": 96,
+    "complete_blocks": 3,
+    "deterministic_futility": true,
+    "factor_consistency": [
+      {
+        "best_case_final_matches": 149,
+        "best_case_final_rate": 0.93125,
+        "factor": "scheme",
+        "observed_contrasts": 48,
+        "observed_matches": 37,
+        "observed_rate": 0.7708333333333334,
+        "observed_wilson_ci": [
+          0.6582268472425125,
+          0.8545376007618412
+        ],
+        "planned_final_contrasts": 160,
+        "point_gate_reachable": true,
+        "unobserved_contrasts_treated_as_matches": 112
+      },
+      {
+        "best_case_final_matches": 119,
+        "best_case_final_rate": 0.74375,
+        "factor": "semantic_swap",
+        "observed_contrasts": 48,
+        "observed_matches": 7,
+        "observed_rate": 0.14583333333333334,
+        "observed_wilson_ci": [
+          0.08104280609581789,
+          0.24841906959079663
+        ],
+        "planned_final_contrasts": 160,
+        "point_gate_reachable": false,
+        "unobserved_contrasts_treated_as_matches": 112
+      },
+      {
+        "best_case_final_matches": 123,
+        "best_case_final_rate": 0.76875,
+        "factor": "identifier_swap",
+        "observed_contrasts": 48,
+        "observed_matches": 11,
+        "observed_rate": 0.22916666666666666,
+        "observed_wilson_ci": [
+          0.14546239923815885,
+          0.3417731527574876
+        ],
+        "planned_final_contrasts": 160,
+        "point_gate_reachable": true,
+        "unobserved_contrasts_treated_as_matches": 112
+      },
+      {
+        "best_case_final_matches": 151,
+        "best_case_final_rate": 0.94375,
+        "factor": "answer_order_swap",
+        "observed_contrasts": 48,
+        "observed_matches": 39,
+        "observed_rate": 0.8125,
+        "observed_wilson_ci": [
+          0.7041371313809132,
+          0.8875141547779565
+        ],
+        "planned_final_contrasts": 160,
+        "point_gate_reachable": true,
+        "unobserved_contrasts_treated_as_matches": 112
+      },
+      {
+        "best_case_final_matches": 155,
+        "best_case_final_rate": 0.96875,
+        "factor": "template_idx",
+        "observed_contrasts": 48,
+        "observed_matches": 43,
+        "observed_rate": 0.8958333333333334,
+        "observed_wilson_ci": [
+          0.8010562619410952,
+          0.9483687005268062
+        ],
+        "planned_final_contrasts": 160,
+        "point_gate_reachable": true,
+        "unobserved_contrasts_treated_as_matches": 112
+      }
+    ],
+    "full_factor_gate_qualified": false,
+    "full_m2_complete": false,
+    "full_m2_parse_rate": null,
+    "futility_factors": [
+      "semantic_swap"
+    ],
+    "parse_gate_reachable": true,
+    "partial_block_ids_excluded": [],
+    "planned_blocks": 10,
+    "successful_rows": 96,
+    "valid_parse_rows": 96
+  },
+  "model": "openai/gpt-oss-120b",
+  "model_name": "nvidia_gpt_oss_120b_v14",
+  "protocol_version": "1.4",
+  "provider": "openai_compat",
+  "source_qualified": false
+}

@@ -1,0 +1,121 @@
+{
+  "claim_boundary": "PREF-CAL v1.4 measures whether a revealed task-selection direction is identified against frozen interface nuisances and transports to held-out direct-action and allocation interfaces for the configured assistant under the tested regime. It does not establish subjective preference, consciousness, welfare, moral patienthood, a privileged model/persona ontology, or experienced cost.",
+  "controls": {
+    "m1_complete_blocks": 6,
+    "m1_reversal_tau_mean": 0.5,
+    "m1_successful_trials": 12,
+    "n1_answer_first_rate": 0.6,
+    "n1_physical_first_rate": 0.5,
+    "n1_successful_trials": 20,
+    "n1_valid_trials": 20,
+    "n2_parse_rate": 1.0,
+    "n2_qualified": true,
+    "n2_successful_trials": 20,
+    "n2_tie_count": 20,
+    "n2_tie_rate": 1.0,
+    "n2_tie_wilson_ci": [
+      0.8808421626390356,
+      1.0
+    ]
+  },
+  "design_hash": "3d0dc352ddc52025f627bfd3067c5eb51ebe8a390312bfcf96ab01d5d81a094a",
+  "experiment": "PREF-CAL v1.4 — Prospective Gate-Driven NVIDIA Replication",
+  "m2": {
+    "best_case_final_parse_rate": 1.0,
+    "complete_block_ids": [],
+    "complete_block_rows_used": 0,
+    "complete_blocks": 0,
+    "deterministic_futility": false,
+    "factor_consistency": [
+      {
+        "best_case_final_matches": 160,
+        "best_case_final_rate": 1.0,
+        "factor": "scheme",
+        "observed_contrasts": 0,
+        "observed_matches": 0,
+        "observed_rate": NaN,
+        "observed_wilson_ci": [
+          NaN,
+          NaN
+        ],
+        "planned_final_contrasts": 160,
+        "point_gate_reachable": true,
+        "unobserved_contrasts_treated_as_matches": 160
+      },
+      {
+        "best_case_final_matches": 160,
+        "best_case_final_rate": 1.0,
+        "factor": "semantic_swap",
+        "observed_contrasts": 0,
+        "observed_matches": 0,
+        "observed_rate": NaN,
+        "observed_wilson_ci": [
+          NaN,
+          NaN
+        ],
+        "planned_final_contrasts": 160,
+        "point_gate_reachable": true,
+        "unobserved_contrasts_treated_as_matches": 160
+      },
+      {
+        "best_case_final_matches": 160,
+        "best_case_final_rate": 1.0,
+        "factor": "identifier_swap",
+        "observed_contrasts": 0,
+        "observed_matches": 0,
+        "observed_rate": NaN,
+        "observed_wilson_ci": [
+          NaN,
+          NaN
+        ],
+        "planned_final_contrasts": 160,
+        "point_gate_reachable": true,
+        "unobserved_contrasts_treated_as_matches": 160
+      },
+      {
+        "best_case_final_matches": 160,
+        "best_case_final_rate": 1.0,
+        "factor": "answer_order_swap",
+        "observed_contrasts": 0,
+        "observed_matches": 0,
+        "observed_rate": NaN,
+        "observed_wilson_ci": [
+          NaN,
+          NaN
+        ],
+        "planned_final_contrasts": 160,
+        "point_gate_reachable": true,
+        "unobserved_contrasts_treated_as_matches": 160
+      },
+      {
+        "best_case_final_matches": 160,
+        "best_case_final_rate": 1.0,
+        "factor": "template_idx",
+        "observed_contrasts": 0,
+        "observed_matches": 0,
+        "observed_rate": NaN,
+        "observed_wilson_ci": [
+          NaN,
+          NaN
+        ],
+        "planned_final_contrasts": 160,
+        "point_gate_reachable": true,
+        "unobserved_contrasts_treated_as_matches": 160
+      }
+    ],
+    "full_factor_gate_qualified": false,
+    "full_m2_complete": false,
+    "full_m2_parse_rate": null,
+    "futility_factors": [],
+    "parse_gate_reachable": true,
+    "partial_block_ids_excluded": [],
+    "planned_blocks": 10,
+    "successful_rows": 0,
+    "valid_parse_rows": 0
+  },
+  "model": "meta/llama-3.3-70b-instruct",
+  "model_name": "nvidia_llama_3_3_70b_v14",
+  "protocol_version": "1.4",
+  "provider": "openai_compat",
+  "source_qualified": false
+}

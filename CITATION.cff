@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use PREF-CAL, please cite the research report and this software release."
+title: "PREF-CAL: Counterfactual Auditing of AI Preference Elicitation"
+type: software
+version: 1.4.0
+date-released: "2026-08-17"
+authors:
+  - family-names: Mariappan
+    given-names: Kishore Kumar
+preferred-citation:
+  type: generic
+  title: "Different Models, Different Nuisances: Counterfactual Auditing of AI Preference Elicitation"
+  year: 2026
+  authors:
+    - family-names: Mariappan
+      given-names: Kishore Kumar
