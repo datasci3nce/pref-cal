@@ -9,18 +9,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: python -m pip install --upgrade pip
-      - run: python -m pip install -e ".[dev]"
+
+      # Verify the pristine Git checkout before package installation or tests
+      # can create local build/cache metadata.
       - name: Check byte-level manifest
         run: python scripts/regenerate_manifest.py --check
+
+      # pip recommends a regular local install (rather than editable mode) for CI.
+      - name: Install package and test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install ".[dev]"
+
       - name: Reconstruct archived evidence
         run: python scripts/verify_release.py
+
       - name: Check report-number snapshot
         run: python scripts/reproduce_report_numbers.py --check
+
       - name: Run release-evidence regression tests
         run: python -m unittest discover -s tests -p 'test_release_*.py' -v
+
       - name: Run full test suite
         run: pytest -q

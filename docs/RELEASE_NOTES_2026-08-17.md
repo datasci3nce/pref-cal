@@ -20,3 +20,12 @@ This pass changes release engineering and report synchronization, not the frozen
 ## Unchanged scientific record
 
 The frozen designs, raw provider logs, prospective stop, GPT-OSS `7/48` semantic/physical consistency, `119/160 = 74.375%` best-case bound, and matched GPT-OSS/Llama 16-prompt fingerprints are unchanged.
+
+### CI integrity hardening
+
+The byte-level manifest is now checked against the pristine Git checkout before
+package installation or tests.  Manifest generation ignores transient build and
+cache metadata (including `*.egg-info`), reports the paths responsible for a
+stale-manifest failure, and `.gitattributes` pins release text files to LF line
+endings for deterministic cross-platform Git checkouts.  CI uses a regular local
+package install rather than editable mode.

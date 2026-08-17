@@ -10,7 +10,16 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 ARCHIVE_ROOT = "PREF-CAL"
-EXCLUDED_PARTS = {".git", ".pytest_cache", "__pycache__", ".venv"}
+EXCLUDED_PARTS = {
+    ".git",
+    ".pytest_cache",
+    "__pycache__",
+    ".venv",
+    ".mypy_cache",
+    ".ruff_cache",
+    "build",
+    "dist",
+}
 EXCLUDED_SUFFIXES = {".pyc", ".aux", ".bbl", ".blg", ".log", ".out", ".toc", ".synctex.gz"}
 
 
@@ -19,6 +28,7 @@ def included(path: Path) -> bool:
     return (
         path.is_file()
         and not any(part in EXCLUDED_PARTS for part in rel.parts)
+        and not any(part.endswith(".egg-info") for part in rel.parts)
         and not any(path.name.endswith(suffix) for suffix in EXCLUDED_SUFFIXES)
     )
 
@@ -38,7 +48,7 @@ def main() -> None:
     parser.add_argument(
         "--output",
         type=Path,
-        default=ROOT.parent / "PREF_CAL_GitHub_Release_2026-08-17_FIXED.zip",
+        default=ROOT.parent / "PREF_CAL_GitHub_Release_2026-08-17_FINAL.zip",
     )
     args = parser.parse_args()
     run_checks()
